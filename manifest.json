@@ -1,0 +1,48 @@
+{
+    "manifest_version":2,
+    "name":"Discord Anime Rich Presence",
+    "version":"1.0",
+    "description":"Updates Discord Rich presence with current watching anime",
+    "permissions":[
+        "activeTab",
+        "tabs",
+        "background",
+        "storage",
+        "scripting",
+        "webRequest",
+        "webRequestBlocking",
+        "https://*/*",
+        "http://*/*"
+        
+    ],
+    "background":{
+        "scripts":["background.js"]
+    },
+    "content_scripts":[
+        {
+            "matches":["*://*.animepahe.ru/*"],
+            "js":["content_script.js"]
+        }
+    ],
+    
+    "icons":{
+        "128":"./discordExticon.png",
+        "16":"./discordExticon.png",
+        "32":"./discordExticon.png",
+        "48":"./discordExticon.png"
+    },
+    "browser_action":{
+        "default_popup":"./Authorized.html",
+        "default_icon":{
+            "16":"./discordExticon.png",
+            "48":"./discordExticon.png",
+            "128":"./discordExticon.png"
+        },
+    "host_permissions":[
+        "https://*.github.com/Adw-eeyaa",
+        "https://*.animepahe.ru/*"
+    ]
+    }
+    
+    
+}

@@ -34,7 +34,9 @@ rpc.on('ready',()=>{
     console.log("Connected To Discord");
 });
 app.use(cors({
-    origin:'chrome-extension://ocncfhmdkcnilpakelekfmjlggffceec'
+    origin:'moz-extension://d3e9710a-75f7-45f5-b951-45170df7ee03',
+    methods:['GET','POST','PUT','DELETE'],
+    allowedHeaders:['Content-Type','Authorization']
 }));
 app.use(express.json());
 async function updatePresence(animeDetails){

@@ -7,5 +7,5 @@ anchor.addEventListener('click',()=>{
 */
 const anchorPop = document.querySelector('.button-class');
 anchorPop.addEventListener('click',()=>{
-    chrome.tabs.create({url:"https://github.com/Adw-eeyaa"})
+    browser.tabs.create({url:"https://github.com/Adw-eeyaa/Discord-Presence-Chromium-Extension/releases/tag/v1.0.0"})
 });

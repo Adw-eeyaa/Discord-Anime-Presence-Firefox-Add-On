@@ -1,5 +1,6 @@
 
-chrome.runtime.onInstalled.addListener(()=>{
+
+browser.runtime.onInstalled.addListener(()=>{
     console.log('Extension Installed');
 })
 
@@ -21,7 +22,7 @@ chrome.runtime.onInstalled.addListener(()=>{
 });
 */
 
-chrome.runtime.onMessage.addListener((message)=>{
+browser.runtime.onMessage.addListener((message)=>{
     if(message && message!='redirect'){
         fetch('http://localhost:3000/update',{
             method:'POST',
